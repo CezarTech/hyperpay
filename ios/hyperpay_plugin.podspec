@@ -17,12 +17,11 @@ A new Flutter project.
   s.swift_version = '5.0'
 
   # HyperPay Mobile SDK v7.11.0 — vendored directly (no CocoaPods distribution for this version)
-  # OPPWAMobile: main SDK framework
-  # ipworks3ds_sdk: 3DS SDK for testing/UAT builds
-  # ipworks3ds_sdk_deploy: 3DS SDK for production/release builds
+  # ipworks3ds_sdk_deploy.xcframework is used (production 3DS SDK).
+  # Both deploy and non-deploy variants expose the same internal module name,
+  # so only one can be linked at a time.
   s.vendored_frameworks = [
     'Frameworks/OPPWAMobile.xcframework',
-    'Frameworks/ipworks3ds_sdk.xcframework',
     'Frameworks/ipworks3ds_sdk_deploy.xcframework'
   ]
 
